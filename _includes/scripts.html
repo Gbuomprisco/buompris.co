@@ -1,0 +1,12 @@
+{% if page.layout == 'project' %}
+  <script src="{{ "/app/vendor.js" | prepend: site.baseurl }}" defer></script>
+  <script src="{{ "/app/app.js" | prepend: site.baseurl }}" defer></script>
+
+  {% if site.environment == 'production' %}
+    {% include analytics.html %}
+  {% endif %}
+
+  {% if site.environment == 'development' %}
+    {% include hot.html %}
+  {% endif %}
+{% endif %}

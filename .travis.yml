@@ -1,0 +1,27 @@
+sudo: false
+language: ruby
+rvm:
+- 2.2
+cache:
+  bundler: true
+  directories:
+  - "$(npm config get prefix)/bin"
+  - node_modules
+before_script:
+    - nvm install v6.7.0
+    - npm i
+script: npm run build
+deploy:
+  - provider: releases
+    skip_cleanup: true
+    on:
+      repo: nickroberts/jekyll-typescript-webpack
+      tags: true
+  - provider: script
+    skip_cleanup: true
+    script: npm run deploy
+    on:
+      branch: master
+env:
+  global:
+    secure: "gLvY2KNbmalI8ARvY70L1b65y2/tTiIJ2KG9cEo/Mfy+K44kafUE0w13Qq0HW7SqWL1pGEXq6pDfkp1+ngQ/OAbPWc4hWxcvetwXaT4wSlu4wED+y2NLR5DH1TMopLm5jCgMkNt3lxAr/ggYLiFiW4ymotMkO7VcWp2Qkz6SwajMvUppSsC+Rv9LHzkDIr42Fc7Zd1DcqTSfGo0+CIXlXqRichFdI/qkQmMx8PCI66L0GnCWel1rArybdjR65kO5VkOGXKatKHFNOgs6zWEcishwkBF+JROUZj3XWRM5BU/AMrOc4bnG9fQhjPMiobnpJ/UKzpQZ6KdN6mT9ShCFoF+PChsx9qWzFfzRN/pYXGtd8YyLgxTm/9KCjUYzLdBSfILUWTK69YoyzBiJmbLgtkSk9IdrMyv47Fdr0osfVMQ9dXs26tcvaWfkXEjZfYyGGU9+Pbc1UmAbwh7332oy1aF8/kUUnHA+nkMVSg8HLVhjyj+Pv5RoGaFX60wSzTYtt9FQje+WUKb4cC+MEawHLydoBS4uZC0a1Zt0TwR6v7VDl+2eZxoer3Fum7WLgkyEbGzy+Ru7QSbIpKa+HP1hKbrcw+7vaq7SnDZIEmON2aKKtrPmpviSQauAg0z5HybNMmvtjYaOiuE75/oGS+jmYUCpIYwaAOeDFazze0nBvFU="

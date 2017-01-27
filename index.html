@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<h1 class="text-thin">
+  Ciao. <br/>
+  I am a Front End Engineer based in London, UK. <br />
+  Angular &amp; Typescript guy - Italian - coffee addict.
+</h1>
+
+<div class="layout-padding--horizontal writings-section">
+  <h3 class="heading-2">
+    Writings
+  </h3>
+
+ <div class="posts"></div>
+</div>
+
+<div class="layout-padding--horizontal projects-section">
+  <h3 class="heading-2">
+    Projects
+  </h3>
+
+  {% for project in site.projects %}
+
+  <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">
+    {{ project.name | escape }}
+  </a>
+
+  {% endfor %}
+</div>
+
+<footer class="footer">
+  <p>
+    Need to contact me? Send me an email at
+
+    <a href="mailto:giancarlo@buompris.co">
+      giancarlo@buompris.co
+    </a>
+  </p>
+</footer>
+
+<script src="/js/medium-rss.script.js" defer async></script>

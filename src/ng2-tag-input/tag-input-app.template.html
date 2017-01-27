@@ -1,0 +1,103 @@
+<h1>
+    <span>
+        ng2-tag-input
+    </span>
+
+    <span class="pull-right">
+        <a href="https://travis-ci.org/Gbuomprisco/ng2-tag-input" class="build__image">
+            <img src="https://travis-ci.org/Gbuomprisco/ng2-tag-input.svg?branch=develop">
+        </a>
+
+        <a class="github-button" href="https://github.com/gbuomprisco/ng2-tag-input" data-icon="octicon-star" data-style="mega" data-count-href="/gbuomprisco/ng2-tag-input/stargazers" data-count-api="/repos/gbuomprisco/ng2-tag-input#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star gbuomprisco/ng2-tag-input on GitHub">Star</a>
+        <a class="github-button" href="https://github.com/gbuomprisco/ng2-tag-input/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/gbuomprisco/ng2-tag-input/network" data-count-api="/repos/gbuomprisco/ng2-tag-input#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork gbuomprisco/ng2-tag-input on GitHub">Fork</a>
+    </span>
+</h1>
+
+<div class="section">
+    <h4>Basic component</h4>
+    <tag-input [ngModel]="['Item']"></tag-input>
+</div>
+
+<div class="section">
+    <h4>Editable tags</h4>
+    <tag-input [ngModel]='["I am editable"]' [editable]='true'></tag-input>
+</div>
+
+<div class="section">
+    <h4>Non-removable tags</h4>
+    <tag-input [ngModel]='["I am editable"]' [removable]='false'></tag-input>
+</div>
+
+<div class="section">
+    <h4>Readonly tags</h4>
+    <tag-input [ngModel]='["I am editable"]' [readonly]='true'></tag-input>
+</div>
+
+<div class="section">
+    <h4>Input tag that allows max 3 tags</h4>
+    <tag-input [ngModel]="['Javascript', 'Typescript']"
+               [maxItems]="3"
+               [placeholder]="'Insert a new item'">
+    </tag-input>
+</div>
+
+<div class="section">
+    <h4>Tags within an autocomplete component</h4>
+    <tag-input [ngModel]="['@item']">
+        <tag-input-dropdown [autocompleteItems]="autocompleteItems"></tag-input-dropdown>
+    </tag-input>
+</div>
+
+<div class="section">
+    <h4>Tags accepting only items from an autocomplete</h4>
+    <tag-input [ngModel]="['@item']"
+               [onlyFromAutocomplete]="true">
+        <tag-input-dropdown [showDropdownIfEmpty]="true" [autocompleteItems]="autocompleteItems"></tag-input-dropdown>
+    </tag-input>
+</div>
+
+<div class="section">
+    <h4>An input which allows adding items by pressing the key "space" of your keyboard</h4>
+    <tag-input [ngModel]="['@item']"
+               [separatorKeys]="[32]">
+    </tag-input>
+</div>
+
+<div class="section">
+    <h4>Tags with a custom template</h4>
+    <tag-input [ngModel]="['@item']" #input>
+        <template item-template let-item="item">
+            <span>
+                item: {{ item.display }}
+            </span>
+
+            <delete-icon (click)="input.removeItem(item)">
+                x
+            </delete-icon>
+        </template>
+    </tag-input>
+</div>
+
+<div class="section">
+    <h4>Tags with Custom theme minimal</h4>
+    <form>
+        <tag-input
+                [theme]="'minimal'"
+                [ngModel]="['@item']"
+                name="items">
+        </tag-input>
+    </form>
+</div>
+
+<div class="section">
+    <h4>Tags with Custom theme dark</h4>
+    <form>
+        <tag-input
+                [addOnPaste]="true"
+                [pasteSplitPattern]="'-'"
+                [theme]="'dark'"
+                [ngModel]="['@item']"
+                name="items">
+        </tag-input>
+    </form>
+</div>

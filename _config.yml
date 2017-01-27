@@ -1,0 +1,33 @@
+title: Giancarlo Buomprisco
+email: giancarlo@buompris.co
+description: > # this means to ignore newlines until "baseurl:"
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "www.buompris.co" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username:
+github_username: gbuomprisco
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+  - jekyll-sass-converter
+  - jekyll-paginate
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+includes:
+- js
+
+collections:
+  projects:
+    output: true
+    permalink: /:path/
+
+exclude: ['src', 'scripts', 'node_modules', 'Gemfile*', '*.json', 'README.md', 'webpack', '*.log', 'vendor']
+keep_files: ['fonts', 'app']
+environment: development
+sass:
+    sass_dir: _sass

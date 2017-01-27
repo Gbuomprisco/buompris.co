@@ -1,0 +1,71 @@
+---
+
+---
+
+@import "minima";
+@import "spinner";
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #fff;
+}
+
+.layout-padding--horizontal {
+  padding: 8px 0;
+}
+
+header {
+  padding: 2em 0;
+}
+
+.header__title,
+.header__title:visited {
+  font-weight: 700;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+  color: #000;
+  background: #fff;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background 0.5s;
+}
+
+.header__title:hover {
+  text-decoration: none;
+  background: rgba(255, 255, 0, 0.2);
+}
+
+.post-link, .post-link:visited {
+  font-size: 1em;
+  color: #525252;
+  line-height: 1.8;
+}
+
+.post-content {
+  font-family: 'Georgia', serif;
+  font-size: 1.3em;
+  line-height: 2;
+}
+
+.heading-2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1em;
+  letter-spacing: 0.5px;
+}
+
+.pull-right {
+  float: right;
+}
+
+.text-thin {
+  font-weight: 300;
+}
+
+.footer {
+  margin: 1em 0;
+}
+
+.writings-section {
+  margin: 2em 0;
+}
