@@ -65,15 +65,13 @@
 
 <div class="section">
     <h4>Tags with a custom template</h4>
-    <tag-input [ngModel]="['@item']" #input>
-        <template item-template let-item="item">
+    <tag-input [ngModel]="[]" #input>
+        <template item-template let-item="item" let-index="index">
             <span>
                 item: {{ item.display }}
             </span>
 
-            <delete-icon (click)="input.removeItem(item)">
-                x
-            </delete-icon>
+            <delete-icon (click)="input.removeItem(item, index)"></delete-icon>
         </template>
     </tag-input>
 </div>
@@ -90,7 +88,7 @@
 </div>
 
 <div class="section">
-    <h4>Tags with Custom theme dark</h4>
+    <h4>Tags with Custom theme dark and pasteable items</h4>
     <form>
         <tag-input
                 [addOnPaste]="true"
