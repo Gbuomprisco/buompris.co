@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TagInputApp } from './ng2-tag-input/tag-input-app.component';
 import { TagInputModule } from 'ng2-tag-input';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
     imports: [
@@ -12,6 +13,7 @@ import { TagInputModule } from 'ng2-tag-input';
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
+        HttpModule,
         TagInputModule
     ],
     declarations: [ TagInputApp ],
