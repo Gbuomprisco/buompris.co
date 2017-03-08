@@ -1,6 +1,6 @@
 {
-  "name": "jekyll-typescript-webpack",
-  "version": "1.0.0",
+  "name": "gbuomprisco.github.io",
+  "version": "0.0.1",
   "description": "",
   "scripts": {
     "start": "concurrently --color --raw 'npm run jekyll:watch' 'npm run webpack-dev-server'",
@@ -22,14 +22,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@angular/common": "2.4.1",
-    "@angular/compiler": "2.3.1",
-    "@angular/compiler-cli": "2.4.1",
-    "@angular/core": "2.4.1",
-    "@angular/forms": "2.4.1",
-    "@angular/platform-browser": "2.4.1",
-    "@angular/platform-browser-dynamic": "2.4.1",
-    "ng2-tag-input": "^0.7.9",
+    "@angular/common": "2.4.9",
+    "@angular/compiler": "2.4.9",
+    "@angular/compiler-cli": "2.4.9",
+    "@angular/core": "2.4.9",
+    "@angular/forms": "2.4.9",
+    "@angular/platform-browser": "2.4.9",
+    "@angular/platform-browser-dynamic": "2.4.9",
+    "ng2-tag-input": "^0.8.8",
     "rxjs": "^5.0.2"
   },
   "devDependencies": {

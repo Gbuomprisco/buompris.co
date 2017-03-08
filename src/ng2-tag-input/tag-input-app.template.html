@@ -25,12 +25,12 @@
 
 <div class="section">
     <h4>Non-removable tags</h4>
-    <tag-input [ngModel]='["I am editable"]' [removable]='false'></tag-input>
+    <tag-input [ngModel]='["I am not removable"]' [removable]='false'></tag-input>
 </div>
 
 <div class="section">
     <h4>Readonly tags</h4>
-    <tag-input [ngModel]='["I am editable"]' [readonly]='true'></tag-input>
+    <tag-input [ngModel]='["I am readonly"]' [readonly]='true'></tag-input>
 </div>
 
 <div class="section">
@@ -52,7 +52,9 @@
     <h4>Tags accepting only items from an autocomplete</h4>
     <tag-input [ngModel]="['@item']"
                [onlyFromAutocomplete]="true">
-        <tag-input-dropdown [showDropdownIfEmpty]="true" [autocompleteItems]="autocompleteItems"></tag-input-dropdown>
+        <tag-input-dropdown [showDropdownIfEmpty]="true"
+                            [autocompleteItems]="autocompleteItems">
+        </tag-input-dropdown>
     </tag-input>
 </div>
 
