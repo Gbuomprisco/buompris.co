@@ -29,6 +29,6 @@ collections:
 
 exclude: ['src', 'scripts', 'node_modules', 'Gemfile*', '*.json', 'README.md', 'webpack', '*.log', 'vendor']
 keep_files: ['fonts', 'app']
-environment: development
+environment: production
 sass:
     sass_dir: _sass
