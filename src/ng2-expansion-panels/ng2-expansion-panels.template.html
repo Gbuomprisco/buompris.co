@@ -1,0 +1,59 @@
+<main>
+    <div class="home-container">
+        <h1>Expansion Panels</h1>
+
+        <expansion-panels-container>
+            <expansion-panel #panel>
+                <expansion-panel-title>
+                    Name
+                </expansion-panel-title>
+
+                <expansion-panel-description-hidden>
+                    Type here your name
+                </expansion-panel-description-hidden>
+
+                <expansion-panel-description-toggled>
+                    Type here your name
+                </expansion-panel-description-toggled>
+
+                <expansion-panel-content>
+                    <input placeholder="name" [(ngModel)]="form.name" />
+                </expansion-panel-content>
+
+                <expansion-panel-buttons>
+                    <button (click)="panel.cancel()">
+                        Cancel
+                    </button>
+
+                    <button (click)="panel.submit()">
+                        Submit
+                    </button>
+                </expansion-panel-buttons>
+            </expansion-panel>
+
+            <expansion-panel>
+                <expansion-panel-title>
+                    Hobbies
+                </expansion-panel-title>
+
+                <expansion-panel-description-hidden>
+                    Enter some hobbies here
+                </expansion-panel-description-hidden>
+
+                <expansion-panel-description-toggled>
+                    Enter some hobbies
+                </expansion-panel-description-toggled>
+
+                <expansion-panel-content>
+                    <tag-input [(ngModel)]="form.hobbies"></tag-input>
+                </expansion-panel-content>
+            </expansion-panel>
+        </expansion-panels-container>
+
+        <div *ngIf="form.hobbies.length && form.name">
+            <p>
+                Your name is {{ form.name }}, and your hobbies are {{ form.hobbies }}
+            </p>
+        </div>
+    </div>
+</main>
