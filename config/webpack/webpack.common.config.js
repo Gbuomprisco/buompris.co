@@ -39,6 +39,7 @@ module.exports = {
 
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.js'}),
+        new webpack.optimize.DedupePlugin(),
         new extractTextPlugin({filename: '[name].css', allChunks: true})
     ]
 };

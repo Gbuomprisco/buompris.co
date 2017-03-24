@@ -6,4 +6,4 @@ date:   2016-12-31 00:48:49 +0100
 categories: code
 ---
 
-{% include demo/ng2-tag-input.html %}
+{% include demo/demo.html %}

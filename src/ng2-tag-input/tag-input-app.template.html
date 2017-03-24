@@ -19,21 +19,6 @@
 </div>
 
 <div class="section">
-    <h4>Editable tags</h4>
-    <tag-input [ngModel]='["I am editable"]' [editable]='true'></tag-input>
-</div>
-
-<div class="section">
-    <h4>Non-removable tags</h4>
-    <tag-input [ngModel]='["I am not removable"]' [removable]='false'></tag-input>
-</div>
-
-<div class="section">
-    <h4>Readonly tags</h4>
-    <tag-input [ngModel]='["I am readonly"]' [readonly]='true'></tag-input>
-</div>
-
-<div class="section">
     <h4>Input tag that allows max 3 tags</h4>
     <tag-input [ngModel]="['Javascript', 'Typescript']"
                [maxItems]="3"
@@ -90,6 +75,14 @@
 </div>
 
 <div class="section">
+    <h3>Tags with user-defined Foundation theme</h3>
+    <tag-input [ngModel]="['bootstrap', 'foundation']"
+               [theme]="'foundation-theme'"
+               [modelAsStrings]="true">
+    </tag-input>
+</div>
+
+<div class="section">
     <h4>Tags with Custom theme minimal</h4>
     <form>
         <tag-input
@@ -140,4 +133,19 @@
     <tag-input [ngModel]="['@item']"
                [transform]="transform">
     </tag-input>
+</div>
+
+<div class="section">
+    <h4>Editable tags</h4>
+    <tag-input [ngModel]='["I am editable"]' [editable]='true'></tag-input>
+</div>
+
+<div class="section">
+    <h4>Non-removable tags</h4>
+    <tag-input [ngModel]='["I am not removable"]' [removable]='false'></tag-input>
+</div>
+
+<div class="section">
+    <h4>Readonly tags</h4>
+    <tag-input [ngModel]='["I am readonly"]' [readonly]='true'></tag-input>
 </div>

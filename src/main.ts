@@ -3,9 +3,24 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { TagInputApp } from './ng2-tag-input/tag-input-app.component';
+import { TagInputDemoApp } from './ng2-tag-input/tag-input-app.component';
+import { Ng2DropdownModule } from 'ng2-material-dropdown';
 import { TagInputModule } from 'ng2-tag-input';
+import { Ng2SelectModule } from 'ng2-material-select';
+import { ExpansionPanelsModule } from 'ng2-expansion-panels';
 import { HttpModule } from '@angular/http';
+import { Ng2MaterialDropdownDemoApp } from './ng2-material-dropdown/ng2-material-dropdown.component';
+import { DemoComponent } from './demo.component';
+import { Ng2MaterialSelectDemoApp } from './ng2-material-select/ng2-material-select.component';
+import { Ng2ExpansionPanelsDemoApp } from './ng2-expansion-panels/ng2-expansion-panels.component';
+
+const COMPONENTS = [
+    DemoComponent,
+    TagInputDemoApp,
+    Ng2MaterialDropdownDemoApp,
+    Ng2MaterialSelectDemoApp,
+    Ng2ExpansionPanelsDemoApp
+];
 
 @NgModule({
     imports: [
@@ -14,11 +29,17 @@ import { HttpModule } from '@angular/http';
         FormsModule,
         ReactiveFormsModule,
         HttpModule,
-        TagInputModule
+
+        Ng2SelectModule,
+        TagInputModule,
+        Ng2DropdownModule,
+        ExpansionPanelsModule
     ],
-    declarations: [ TagInputApp ],
-    bootstrap: [ TagInputApp ],
-    entryComponents: [  ]
+    declarations: COMPONENTS,
+    bootstrap: [DemoComponent],
+    exports: COMPONENTS
 })
-export class AppModule {}
+export class AppModule {
+
+}
 platformBrowserDynamic().bootstrapModule(AppModule);

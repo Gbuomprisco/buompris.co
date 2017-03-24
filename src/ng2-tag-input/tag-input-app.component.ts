@@ -4,11 +4,11 @@ import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
 
 @Component({
-    selector: 'tag-input-app',
-    styleUrls: ['./tag-input-app.style.scss'],
+    selector: 'ng2-tag-input-demo',
+    styleUrls: ['./tag-input-app.style.scss', './_custom-theme.scss'],
     templateUrl: './tag-input-app.template.html'
 })
-export class TagInputApp {
+export class TagInputDemoApp {
     constructor(private http: Http) {}
 
     public autocompleteItems: string[] = [

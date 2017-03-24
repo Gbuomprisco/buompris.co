@@ -29,7 +29,9 @@
     "@angular/forms": "2.4.9",
     "@angular/platform-browser": "2.4.9",
     "@angular/platform-browser-dynamic": "2.4.9",
-    "ng2-tag-input": "^0.9.1",
+    "ng2-expansion-panels": "0.0.6",
+    "ng2-material-select": "^0.1.6",
+    "ng2-tag-input": "^0.9.10",
     "rxjs": "^5.0.2"
   },
   "devDependencies": {

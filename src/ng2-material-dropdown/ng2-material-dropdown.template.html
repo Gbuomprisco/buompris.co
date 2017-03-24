@@ -1,0 +1,182 @@
+<h1>
+    <span>
+        ng2-material-dropdown
+    </span>
+
+    <span class="pull-right">
+        <a href="https://travis-ci.org/Gbuomprisco/ng2-material-dropdown" class="build__image">
+            <img src="https://travis-ci.org/Gbuomprisco/ng2-material-dropdown.svg?branch=develop">
+        </a>
+
+        <a class="github-button" href="https://github.com/gbuomprisco/ng2-material-dropdown" data-icon="octicon-star" data-style="mega" data-count-href="/gbuomprisco/ng2-material-dropdown/stargazers" data-count-api="/repos/gbuomprisco/ng2-material-dropdown#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star gbuomprisco/ng2-material-dropdown on GitHub">Star</a>
+        <a class="github-button" href="https://github.com/gbuomprisco/ng2-material-dropdown/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/gbuomprisco/ng2-material-dropdown/network" data-count-api="/repos/gbuomprisco/ng2-material-dropdown#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork gbuomprisco/ng2-material-dropdown on GitHub">Fork</a>
+    </span>
+</h1>
+
+<main>
+    <div>
+        <h2>
+            Simple dropdown
+        </h2>
+
+        <ng2-dropdown>
+            <ng2-dropdown-button>
+                Open Menu
+            </ng2-dropdown-button>
+            <ng2-dropdown-menu>
+                <ng2-menu-item *ngFor="let page of pages">
+                    <i class="material-icons" ng2-menu-item-icon>{{ page.toLowerCase() }}</i>
+
+                    {{ page }}
+                </ng2-menu-item>
+                <div class='ng2-menu-divider'></div>
+                <ng2-menu-item>
+                    With Divider
+                </ng2-menu-item>
+            </ng2-dropdown-menu>
+        </ng2-dropdown>
+    </div>
+
+    <div class="section">
+        <h2>
+            Dropdown with prevent close items
+        </h2>
+
+        <ng2-dropdown>
+            <ng2-dropdown-button>
+                Open Menu
+            </ng2-dropdown-button>
+            <ng2-dropdown-menu>
+                <ng2-menu-item [preventClose]="true">
+                    I am not going to close the menu
+                </ng2-menu-item>
+
+                <ng2-menu-item [preventClose]="true">
+                    me neither
+                </ng2-menu-item>
+
+                <ng2-menu-item>
+                    But I am!
+                </ng2-menu-item>
+            </ng2-dropdown-menu>
+        </ng2-dropdown>
+    </div>
+
+    <div class="section">
+        <h2>Dropdown with width = 2</h2>
+        <ng2-dropdown>
+            <ng2-dropdown-button>
+                Open Menu
+            </ng2-dropdown-button>
+            <ng2-dropdown-menu [width]="2" [focusFirstElement]="false">
+                <ng2-menu-item>
+                    First item
+                </ng2-menu-item>
+
+                <ng2-menu-item>
+                    Second item
+                </ng2-menu-item>
+            </ng2-dropdown-menu>
+        </ng2-dropdown>
+    </div>
+
+    <div class="section">
+        <h2>Dropdown with icon</h2>
+        <div>
+            <ng2-dropdown>
+                <ng2-dropdown-button class="ng2-dropdown-button--icon" [showCaret]="false">
+                    <i class="material-icons" ng2-menu-item-icon>menu_vert</i>
+                </ng2-dropdown-button>
+                <ng2-dropdown-menu [width]="4">
+                    <ng2-menu-item>
+                        Home
+                    </ng2-menu-item>
+                    <ng2-menu-item>
+                        About
+                    </ng2-menu-item>
+                    <ng2-menu-item>
+                        Logout
+                    </ng2-menu-item>
+                </ng2-dropdown-menu>
+            </ng2-dropdown>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Dropdown with width = 6</h2>
+        <ng2-dropdown>
+            <ng2-dropdown-button>
+                Open Menu
+            </ng2-dropdown-button>
+            <ng2-dropdown-menu [width]="6" [focusFirstElement]="false">
+                <ng2-menu-item>
+                    First item
+                </ng2-menu-item>
+
+                <ng2-menu-item>
+                    Second item
+                </ng2-menu-item>
+            </ng2-dropdown-menu>
+        </ng2-dropdown>
+    </div>
+
+    <div class="section">
+        <h2>Dropdown with offset 100 100</h2>
+        <ng2-dropdown>
+            <ng2-dropdown-button>
+                Open Menu
+            </ng2-dropdown-button>
+            <ng2-dropdown-menu [offset]="'100 100'">
+                <ng2-menu-item>
+                    First item
+                </ng2-menu-item>
+
+                <ng2-menu-item>
+                    Second item
+                </ng2-menu-item>
+            </ng2-dropdown-menu>
+        </ng2-dropdown>
+    </div>
+
+    <div class="fixed-section">
+        <h2>Dropdown in a fixed container</h2>
+        <ng2-dropdown>
+            <ng2-dropdown-button>
+                Open Menu
+            </ng2-dropdown-button>
+            <ng2-dropdown-menu [appendToBody]="false" [width]="4">
+                <ng2-menu-item>
+                    Home
+                </ng2-menu-item>
+
+                <ng2-menu-item>om
+                    Help
+                </ng2-menu-item>
+
+                <ng2-menu-item>
+                    About
+                </ng2-menu-item>
+
+                <ng2-menu-item>
+                    Logout
+                </ng2-menu-item>
+
+                <ng2-menu-item>
+                    Home
+                </ng2-menu-item>
+
+                <ng2-menu-item>
+                    Help
+                </ng2-menu-item>
+
+                <ng2-menu-item>
+                    About
+                </ng2-menu-item>
+
+                <ng2-menu-item>
+                    Logout
+                </ng2-menu-item>
+            </ng2-dropdown-menu>
+        </ng2-dropdown>
+    </div>
+</main>
