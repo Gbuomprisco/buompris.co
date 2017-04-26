@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const extractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
 
 module.exports = {
     entry: {
@@ -8,7 +9,7 @@ module.exports = {
     },
 
     output: {
-        path: './app',
+        path: path.resolve('./app'),
         filename: '[name].js'
     },
 
@@ -39,7 +40,6 @@ module.exports = {
 
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.js'}),
-        new webpack.optimize.DedupePlugin(),
         new extractTextPlugin({filename: '[name].css', allChunks: true})
     ]
 };

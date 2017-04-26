@@ -11,6 +11,7 @@
     "sourceMap": true,
     "moduleResolution": "node",
     "rootDir": ".",
+    "skipLibCheck": true,
     "types": ["node", "es6-shim", "jasmine"],
     "suppressImplicitAnyIndexErrors": true
   },

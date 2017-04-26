@@ -46,7 +46,7 @@
 <div class="section">
     <h4>An input which allows adding items by pressing the key "space" of your keyboard</h4>
     <tag-input [ngModel]="['@item']"
-               [separatorKeys]="[32]">
+               [separatorKeyCodes]="[32]">
     </tag-input>
 </div>
 
@@ -148,4 +148,23 @@
 <div class="section">
     <h4>Readonly tags</h4>
     <tag-input [ngModel]='["I am readonly"]' [readonly]='true'></tag-input>
+</div>
+<div class="section">
+    <div>
+        <h4>Drag and drop</h4>
+        <tag-input  [(ngModel)]="dragAndDropExample"
+                    [modelAsStrings]="true"
+                    [dragZone]="'zone1'"
+                    [editable]="true">
+        </tag-input>
+    </div>
+
+    <div>
+        <h4>Drag and drop (as string) can be moved to previous tag-input (and viceversa)</h4>
+        <tag-input  [(ngModel)]="dragAndDropStrings"
+                    [modelAsStrings]="true"
+                    [dragZone]="'zone1'"
+                    [editable]="true">
+        </tag-input>
+    </div>
 </div>

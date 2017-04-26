@@ -11,6 +11,13 @@ import { FormControl } from '@angular/forms';
 export class TagInputDemoApp {
     constructor(private http: Http) {}
 
+    public dragAndDropExample = ['C#', 'Java'];
+
+    public dragAndDropObjects = [
+        {display:'Javascript', value: 'Javascript'},
+        {display:'Typescript', value: 'Typescript'}
+    ];
+
     public autocompleteItems: string[] = [
         'Typescript',
         'Ruby',

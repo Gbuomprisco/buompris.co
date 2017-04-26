@@ -13,6 +13,7 @@ import { Ng2MaterialDropdownDemoApp } from './ng2-material-dropdown/ng2-material
 import { DemoComponent } from './demo.component';
 import { Ng2MaterialSelectDemoApp } from './ng2-material-select/ng2-material-select.component';
 import { Ng2ExpansionPanelsDemoApp } from './ng2-expansion-panels/ng2-expansion-panels.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const COMPONENTS = [
     DemoComponent,
@@ -25,6 +26,7 @@ const COMPONENTS = [
 @NgModule({
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
