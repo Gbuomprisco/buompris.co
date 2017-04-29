@@ -3,6 +3,11 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
 
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/mapTo';
+import 'rxjs/add/operator/map';
+
 @Component({
     selector: 'ng2-tag-input-demo',
     styleUrls: ['./tag-input-app.style.scss', './_custom-theme.scss'],
@@ -62,4 +67,20 @@ export class TagInputDemoApp {
         'startsWithAt@': 'Your items need to start with \'@\'',
         'endsWith$': 'Your items need to end with \'$\''
     };
+
+    public onAdding(tag): Observable<any> {
+        const confirm = window.confirm('Do you really want to add this tag?');
+        return Observable
+            .of(undefined)
+            .filter(() => confirm)
+            .mapTo(tag);
+    }
+
+    public onRemoving(tag): Observable<any> {
+        const confirm = window.confirm('Do you really want to remove this tag?');
+        return Observable
+            .of(undefined)
+            .filter(() => confirm)
+            .mapTo(tag);
+    }
 }

@@ -168,3 +168,12 @@
         </tag-input>
     </div>
 </div>
+
+<div>
+    <h4>Confirm adding and removing tags with Observables</h4>
+    <tag-input [ngModel]="['item1']"
+               [modelAsStrings]="true"
+               [onRemoving]="onRemoving"
+               [onAdding]="onAdding">
+    </tag-input>
+</div>

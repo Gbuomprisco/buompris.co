@@ -33,7 +33,7 @@
     "@angular/platform-browser-dynamic": "4.0.3",
     "ng2-expansion-panels": "0.0.6",
     "ng2-material-select": "^0.1.6",
-    "ng2-tag-input": "^1.2.0",
+    "ng2-tag-input": "^1.2.4",
     "rxjs": "^5.0.2",
     "zone.js": "^0.8.7",
     "core-js": "^2.4.1"
